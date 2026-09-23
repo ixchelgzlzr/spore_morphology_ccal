@@ -1,0 +1,27 @@
+{
+    "id": "A859EA98",
+    "path": "~/Local_docs/spores/scripts/NMDS.R",
+    "project_path": "scripts/NMDS.R",
+    "type": "r_source",
+    "hash": "2374941585",
+    "contents": "",
+    "dirty": false,
+    "created": 1790025717162.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "166,0",
+        "scrollLine": "137"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1790031402,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1790031402084,
+    "read_only": false,
+    "read_only_alternatives": []
+}
