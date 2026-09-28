@@ -4,10 +4,11 @@
 
 # set up the libraries
 library(readxl)
+library(dplyr)
+library(tidyr)
 
 # Read the data
 data <- read_excel("data/data_clean.xlsx", skip = 2, col_names = T)
-
 
 # there are multiple measurements of skirt width so calculate the mean skirt width
 # first separate the widths
@@ -60,9 +61,11 @@ nrows <- ceiling(n / ncols)
 # put all histograms in one figure
 par(mfrow = c(nrows, ncols))
 
-for (i in 1:length(hist_plots)){
+for (i in 1:ncol(con_data)){
   
-  plot(hist_plots[[i]])
+  var           <- colnames(con_data[i])
+  this_var      <- unlist(con_data[ , i])
+  hist_plots[[i]] <- hist(this_var, main = var, xlab = var)
   
 }
 

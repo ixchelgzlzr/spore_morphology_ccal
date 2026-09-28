@@ -93,11 +93,6 @@ tip_to_back.plot
 
 
 
-# compute the average of skirt width
-# first separate the widths
-data <- data %>% separate(Skirt_width, into = c("sw1", "sw2", "sw3"), sep = ",", convert = T) 
-# now calculate means
-data <- data %>% mutate(skirt_width_mean = rowMeans(pick(sw1, sw2, sw3), na.rm = TRUE))
 
 ggplot(data, aes(x = skirt_width_mean, y = Population, colour = Population)) +
   geom_jitter(height = 0.15, width = 0, size = 2.5) +
