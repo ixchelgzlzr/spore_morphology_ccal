@@ -2,6 +2,9 @@
 # NMDS- so we can include categorical traits
 ############################################
 
+#Ciara: don't forget to install packages
+
+
 library(cluster)
 library(vegan)
 library(plotly)
@@ -125,8 +128,8 @@ pairwise_results
 
 ggplot(nmds_data,
        aes(x = Population,
-           y = Longest_diameter,
-           fill = Population)) +
+           y = PDO_Ridge_Depth,
+           fill = PDP_Areolation), drop = F) +
   geom_violin() +
   geom_boxplot(width = 0.15) +
   theme_bw()

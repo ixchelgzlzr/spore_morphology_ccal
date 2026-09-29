@@ -2,6 +2,11 @@
 # Script 1 - Calculate new metrics and Visualize the data
 #############################################################
 
+# if you don't have the packages you need to install them once
+#install.packages("readxl")
+#install.packages("dplyr")
+#install.packages("tidyr")
+
 # set up the libraries
 library(readxl)
 library(dplyr)
@@ -23,10 +28,11 @@ data$skirt_width_prop <- data$skirt_width_mean/(data$Longest_diameter + data$Per
 # compute
 data$roundness <- data$Longest_diameter/data$Perpendicular_to_longest_diameter
 
-# calculate spoe depth
+# calculate spore depth
 data$spore_depth <- data$`Skirt-point_distance` + data$`Skirt-back_distance`
 
 # check the difference between the anterior and the posterior depth
+# TODO: Reconsider whether we should use this metric.
 data$ant_post_depth <- data$`Skirt-point_distance` / data$`Skirt-back_distance`
 
 

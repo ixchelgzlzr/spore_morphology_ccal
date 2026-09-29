@@ -2,6 +2,11 @@
 # PCA  #
 ########
 
+#install.packages("Hmisc")
+#install.packages("corrplot")
+#install.packages("GGally")
+#install.packages("factoextra")
+
 # libraries
 library(Hmisc)
 library(corrplot)
@@ -10,7 +15,6 @@ library(factoextra)
 
 # source the data exploration script
 source("scripts/data_exploration.R")
-
 
 # Let's see correlations between continuous data
 ggpairs(con_data) + theme_minimal()
